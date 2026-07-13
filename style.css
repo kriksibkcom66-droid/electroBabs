@@ -1,7 +1,12 @@
+:root{
+    --mainbgc: rgb(8,8,8);
+    --mainColRed: #aa3f3fe0;
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 li{
     list-style-type: none;
@@ -13,8 +18,9 @@ a{
 
 header{
     height: 10vh;
-    background-color: rgb(52, 52, 52);
+    background-color: var(--mainbgc);
     color: aliceblue;
+    
 }
 .header__container{
     margin: 0 auto;
@@ -39,37 +45,37 @@ header{
     transition: all 0.3s ease-in-out;
 }
 .haeder__content a:hover{
-    color: #e94560;
+    color: var(--mainColRed);
 }
 .login {
-    border: 1px solid #e94560;
+    border: 1px solid var(--mainColRed);
     padding: 5px;
-    background-color: #e94560;
+    background-color: var(--mainColRed);
     border-radius: 5px;
     transition: all 0.3s ease;
 }
 
 .login a {
     color: aliceblue;
+    font-size: 16px;
+    text-transform: uppercase;
     transition: color 0.3s ease;
 }
 
-/* Наведение на саму кнопку */
 .login:hover {
     background-color: aliceblue;
     border-color: aliceblue;
-    box-shadow: 1px 3px 10px #ff153c;
+    box-shadow: 1px 3px 10px var(--mainColRed);
 }
 
-/* Меняем цвет ссылки при наведении на кнопку */
 .login:hover a {
-    color: #e94560;
+    color: var(--mainColRed);
 }
 footer {
-    background-color: rgb(52, 52, 52);
+    background-color: var(--mainbgc);
     color: aliceblue;
     margin-top: 40px;
-    border-top: 3px solid #e94560;
+    border-top: 3px solid var(--mainColRed);
 }
 
 .footer__container {
@@ -124,7 +130,7 @@ footer {
 }
 
 .footer__contacts a:hover {
-    color: #e94560;
+    color: var(--mainColRed);
 }
 
 .footer__contacts p {
@@ -151,7 +157,7 @@ footer {
 }
 
 .footer__nav a:hover {
-    color: #e94560;
+    color: var(--mainColRed);
 }
 
 .footer__schedule {
