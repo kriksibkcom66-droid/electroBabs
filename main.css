@@ -1,0 +1,44 @@
+main{
+    height: auto;
+    width: 100%;
+}
+.sec2 img{
+    width: 100vw;
+    height: 50vh;
+}
+.sec2{
+    background-image: url('https://ardor-gaming.com/files/ardor/game-start__desktop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+  .ticker-wrap {
+    width: 100%;
+    overflow: hidden;
+    color: aliceblue;
+    background: var(--mainbgc);
+    padding: 12px 0;
+  }
+ 
+  .ticker {
+    display: flex;
+    width: max-content;
+    animation: scroll 20s linear infinite;
+  }
+ 
+  .ticker span {
+    color: #fff;
+    font-size: 16px;
+    white-space: nowrap;
+    padding: 0 20px;
+  }
+ 
+  .ticker span::after {
+    content: "•";
+    margin-left: 20px;
+    opacity: 0.6;
+  }
+ 
+  @keyframes scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
