@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electro bubs</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="header__container">
+            <div class="haeder__content">
+                <div class="logo">
+                    <h1>Electro bubs</h1>
+                </div>
+                <div class="navbar">
+                    <ul class="link">
+                        <li class="list">
+                            <a href="#" class="item">Catalog</a>
+                        </li>
+                        <li class="list">
+                            <a href="#" class="item">Company</a>
+                        </li>
+                        <li class="list">
+                            <a href="#" class="item">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="login">
+                    <a href="login.html">go to profile</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        {% block content %}
+
+        {% endblock %}
+    </main>
+<footer>
+    <div class="footer__container">
+        <div class="footer__content">
+            <div class="footer__top">
+                <div class="footer__logo">
+                    <h2>Electro bubs</h2>
+                    <span>Качество, которому можно доверять</span>
+                </div>
+                
+                <div class="footer__contacts">
+                    <h3>Контакты</h3>
+                    <a href="tel:+79294339472">📞 +7 929 433-94-72</a>
+                    <p>📍 Иркутск, Россия</p>
+                    <p>✉️ info@electrobubs.ru</p>
+                </div>
+                
+                <div class="footer__nav">
+                    <h3>Навигация</h3>
+                    <a href="#">Каталог</a>
+                    <a href="#">Компания</a>
+                    <a href="#">Контакты</a>
+                    <a href="login.html">Профиль</a>
+                </div>
+                
+                <div class="footer__schedule">
+                    <h3>Режим работы</h3>
+                    <p>Пн-Пт: 9:00 – 20:00</p>
+                    <p>Сб-Вс: 10:00 – 18:00</p>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p>© 2026 Electro bubs. Все права защищены.</p>
+                <p>Иркутск, Россия</p>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,195 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style-type: none;
+    display: inline-block; 
+}
+a{
+    text-decoration: none;
+}
+
+header{
+    height: 10vh;
+    background-color: rgb(52, 52, 52);
+    color: aliceblue;
+}
+.header__container{
+    margin: 0 auto;
+    max-width: 80vw;
+}
+.haeder__content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+}
+.haeder__content a{
+    color: aliceblue;
+    font-size: 18px;
+    font-weight: bold;
+}
+.link {
+    display: flex;
+    gap: 100px;
+}
+.haeder__content a{
+    transition: all 0.3s ease-in-out;
+}
+.haeder__content a:hover{
+    color: #e94560;
+}
+.login {
+    border: 1px solid #e94560;
+    padding: 5px;
+    background-color: #e94560;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.login a {
+    color: aliceblue;
+    transition: color 0.3s ease;
+}
+
+/* Наведение на саму кнопку */
+.login:hover {
+    background-color: aliceblue;
+    border-color: aliceblue;
+    box-shadow: 1px 3px 10px #ff153c;
+}
+
+/* Меняем цвет ссылки при наведении на кнопку */
+.login:hover a {
+    color: #e94560;
+}
+footer {
+    background-color: rgb(52, 52, 52);
+    color: aliceblue;
+    margin-top: 40px;
+    border-top: 3px solid #e94560;
+}
+
+.footer__container {
+    margin: 0 auto;
+    max-width: 80vw;
+    padding: 40px 0 20px;
+}
+
+.footer__content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.footer__top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer__logo h2 {
+    font-size: 28px;
+    color: aliceblue;
+    margin-bottom: 5px;
+}
+
+.footer__logo span {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.footer__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer__contacts h3 {
+    font-size: 18px;
+    color: aliceblue;
+    margin-bottom: 5px;
+}
+
+.footer__contacts a {
+    color: aliceblue;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.footer__contacts a:hover {
+    color: #e94560;
+}
+
+.footer__contacts p {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+.footer__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer__nav h3 {
+    font-size: 18px;
+    color: aliceblue;
+    margin-bottom: 5px;
+}
+
+.footer__nav a {
+    color: aliceblue;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.footer__nav a:hover {
+    color: #e94560;
+}
+
+.footer__schedule {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.footer__schedule h3 {
+    font-size: 18px;
+    color: aliceblue;
+    margin-bottom: 5px;
+}
+
+.footer__schedule p {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+.footer__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 14px;
+    opacity: 0.7;
+}
+@media (max-width: 768px) {
+    .footer__top {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .footer__bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}
