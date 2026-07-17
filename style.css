@@ -1,6 +1,16 @@
 :root{
-    --mainbgc: rgb(8,8,8);
-    --mainColRed: #aa3f3fe0;
+    --bg:#0B0D10;
+    --surface:#14171C;
+    --surface-2:#1B1F26;
+    --copper:#D98A4E;
+    --copper-dark:#8C532B;
+    --teal:#3ED6B5;
+    --text:#EDEFF2;
+    --muted:#8B93A0;
+    --line: rgba(217,138,78,0.35);
+}
+html {
+    scroll-behavior: smooth;
 }
 *{
     margin: 0;
@@ -18,13 +28,13 @@ a{
 
 header{
     height: 10vh;
-    background-color: var(--mainbgc);
+    background-color: var(--bg);
     color: aliceblue;
     
 }
 .header__container{
     margin: 0 auto;
-    max-width: 80vw;
+    max-width: 90vw;
 }
 .haeder__content{
     display: flex;
@@ -34,30 +44,76 @@ header{
 }
 .haeder__content a{
     color: aliceblue;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
+}
+.logo p{
+    font-size: 22px;
+}
+.logo span{
+    color: var(--copper);
+}
+.searchWindow input{
+    border: none;
+    border-radius: 10px;
+    background-color: var(--surface-2);
+    color: #EDEFF2;
+    padding: 7px;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 270px;
+}
+.searchWindow{
+    border: 1px solid var(--copper);
+    background-color: var(--surface-2);
+    border-radius: 10px;
+    color: rgb(143, 143, 143);
+}
+.searchWindow:focus-within {
+  box-shadow: 0px 3px 10px var(--copper-dark);
+}
+.searchWindow input::placeholder{
+    text-transform: lowercase;   
+}
+.searchWindow input:focus{
+    outline: none;
+}
+.searchWindow button{
+    border: none;
+    border-radius: 10px;
+    background-color: var(--surface-2);
+    padding: 6px;
+    height: 104%;
 }
 .link {
     display: flex;
-    gap: 100px;
+    gap: 30px;
 }
 .haeder__content a{
     transition: all 0.3s ease-in-out;
 }
 .haeder__content a:hover{
-    color: var(--mainColRed);
+    color: var(--copper);
+}
+header::after{
+    content: '';
+    position: absolute;
+    background-color: var(--copper-dark);
+    width: 100%;
+    height: 1px;
+    z-index: 3;
 }
 .login {
-    border: 1px solid var(--mainColRed);
-    padding: 5px;
-    background-color: var(--mainColRed);
-    border-radius: 5px;
+    border: 1px solid var(--copper);
+    padding: 4px;
+    background-color: var(--copper);
+    border-radius: 10px;
     transition: all 0.3s ease;
 }
 
 .login a {
     color: aliceblue;
-    font-size: 16px;
+    font-size: 14px;
     text-transform: uppercase;
     transition: color 0.3s ease;
 }
@@ -65,17 +121,16 @@ header{
 .login:hover {
     background-color: aliceblue;
     border-color: aliceblue;
-    box-shadow: 1px 3px 10px var(--mainColRed);
+    box-shadow: 1px 3px 10px var(--copper);
 }
 
 .login:hover a {
-    color: var(--mainColRed);
+    color: var(--copper);
 }
 footer {
-    background-color: var(--mainbgc);
+    background-color: var(--bg);
     color: aliceblue;
-    margin-top: 40px;
-    border-top: 3px solid var(--mainColRed);
+    border-top: 3px solid var(--copper);
 }
 
 .footer__container {
@@ -130,7 +185,7 @@ footer {
 }
 
 .footer__contacts a:hover {
-    color: var(--mainColRed);
+    color: var(--copper);
 }
 
 .footer__contacts p {
@@ -157,7 +212,7 @@ footer {
 }
 
 .footer__nav a:hover {
-    color: var(--mainColRed);
+    color: var(--copper);
 }
 
 .footer__schedule {
