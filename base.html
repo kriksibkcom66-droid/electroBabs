@@ -5,18 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Electro bubs</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css">
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+    <script src="{{ url_for('static', filename='/js/script.js') }}"></script>
 </head>
 <body>
     <header>
         <div class="header__container">
             <div class="haeder__content">
                 <div class="logo">
-                    <h1>Electro bubs</h1>
+                    <a href="{{url_for('home')}}"><p>Electro <span>bubs</span></p></a>
+                </div>
+                <div class="searchWindow">
+                    <search class="search-method">
+                        <form action="/search" method="get">
+                            <label for="search-input"> </label>
+                            <input type="search" id="search-input" name="query" placeholder="search wideocard, processor...">
+                            <button type="submit">🔍</button>
+                        </form>
+                    </search>
                 </div>
                 <div class="navbar">
                     <ul class="link">
                         <li class="list">
-                            <a href="#" class="item">Catalog</a>
+                            <a href="{{url_for('login')}}" class="item">Catalog</a>
                         </li>
                         <li class="list">
                             <a href="#" class="item">Company</a>
@@ -43,14 +55,14 @@
             <div class="footer__top">
                 <div class="footer__logo">
                     <h2>Electro bubs</h2>
-                    <span>Качество, которому можно доверять</span>
+                    <span>Качество, которому не стоит доверять</span>
                 </div>
                 
                 <div class="footer__contacts">
                     <h3>Контакты</h3>
                     <a href="tel:+79294339472">📞 +7 929 433-94-72</a>
                     <p>📍 Иркутск, Россия</p>
-                    <p>✉️ info@electrobubs.ru</p>
+                    <p>✉️ info676952aura@electrobubs.ru</p>
                 </div>
                 
                 <div class="footer__nav">
@@ -75,5 +87,14 @@
         </div>
     </div>
 </footer>
+    <script>
+    const text = "Guaranteed price impact in the city? Found it cheaper? We’ll beat the price!";
+    const ticker = document.getElementById('ticker');
+    for (let i = 0; i < 8; i++) {
+        const span = document.createElement('span');
+        span.textContent = text;
+        ticker.appendChild(span);
+    }
+    </script>
 </body>
 </html>
